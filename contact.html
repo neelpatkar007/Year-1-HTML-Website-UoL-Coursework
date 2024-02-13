@@ -1,0 +1,74 @@
+<!-- This is an HTML document for the contact page of the TechCon 2023 event -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheet link for linking both the HTML and CSS pages together -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Title of the contact webpage -->
+    <title>TechCon 2023 - Contact</title>
+</head>
+
+<body>
+    <!-- Header section with the TechCon title and navigation links to navigate to the different pages -->
+    <header>
+        <h1>TechCon 2023 - Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section for contact details and a contact form -->
+    <section id="contact">
+        <!-- Subheading for the contact details -->
+        <h2>We'd Love to Hear Back from You!!</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us using the contact details below:</p>
+
+        <!-- Container for contact details -->
+        <div class="contact-details">
+            <!-- Individual contact details for contacting TechCon -->
+            <p><strong>Email:</strong> info@techcon2023.com</p>
+            <p><strong>Phone:</strong> +44 7770123456</p>
+            <p><strong>Fax:</strong> 0845 042 1953</p>
+            <p><strong>Office Address:</strong> 1 University Road, Leicester, LE27TF</p>
+            <p>For any other issues, feel free to contact us at: <strong>support@techcon2023.com</strong></p>
+        </div>
+
+        <!-- Subheading for the contact form -->
+        <h2>Contact Form</h2>
+        <!-- Form for submitting contact information -->
+        <form action="submit_form.php" method="post">
+            <!-- Input field for name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Input field for email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Text area for the message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="10" required></textarea>
+
+            <!-- Submit button for the form submission -->
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 TechCon. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

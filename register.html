@@ -1,0 +1,92 @@
+<!-- This is an HTML document for the registration page of TechCon 2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External stylesheet links for general styles and font-awesome icons -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- External script link for form validation with deferred loading -->
+    <script src="validateForm.js" defer></script>
+    <!-- Title of the Registration webpage -->
+    <title>TechCon 2023 - Registration</title>
+</head>
+
+<body>
+    <!-- Header section with TechCon title and navigation links to go to other pages -->
+    <header>
+        <h1>TechCon 2023 - Registration</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section for registration form -->
+    <section id="register">
+        <!-- Subheading for login -->
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register Below</h2>
+        <!-- Container for the login form -->
+        <div class="container">
+            <!-- Form for login with social media buttons and manual sign-in -->
+            <form action="/action_page.php" id="loginForm" onsubmit="return validateForm()">
+                <!-- Row with two columns: Social media login and manual sign-in -->
+                <div class="row">
+                    <h2 style="text-align:center">Register</h2>
+                    <!-- Column for the social media buttons -->
+                    <div class="col">
+                        <a href="#" class="fb btn">
+                            <i class="fa fa-facebook fa-fw"></i> Register with Facebook
+                        </a>
+                        <a href="#" class="twitter btn">
+                            <i class="fa fa-twitter fa-fw"></i> Register with Twitter
+                        </a>
+                        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                            </i> Register with Google+
+                        </a>
+                    </div>
+                    <!-- Column for the manual sign-in -->
+                    <div class="col">
+                        <div class="hide-md-lg">
+                            <p>Or register manually:</p>
+                        </div>
+                        <!-- Input fields for username and password -->
+                        <input type="text" name="username" id="username" placeholder="Username" required>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <!-- Submit button for the form submission -->
+                        <br>
+                        <input type="submit" value="Register">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Container for additional links -->
+        <div class="bottom-container">
+            <!-- Row with two columns: Sign up and Forgot password -->
+            <div class="row">
+                <div class="col">
+                    <a href="#" style="color:white" class="btn">Login</a>
+                </div>
+                <div class="col">
+                    <a href="#" style="color:white" class="btn">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 TechCon. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking HTML file to CSS file: External stylesheet link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Title of the webpage -->
+    <title>TechCon 2023 - Home</title>
+
+    <style>
+        /* Additional styles for moving the Register button to the top right */
+        #home {
+            position: relative;
+        }
+
+        .cta-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+
+    <!-- JavaScript script for the typing animation in the heading -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Text for the typing animation
+            const text = "Welcome to TechCon 2023";
+            // Declaring variable
+            let index = 0;
+            // Selecting the h2 element
+            const h2Element = document.querySelector('#home h2');
+
+            // Function for the typing animation. Constantly adding 1 to the previous letter
+            function type() {
+                h2Element.textContent += text[index];
+                index++;
+
+                // While the index is less than the length of the text
+                if (index < text.length) {
+                    // Recursive call with a delay for typing speed by 100 milliseconds
+                    setTimeout(type, 100);
+                }
+            }
+
+            // Initial call to start typing animation
+            type();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header section containing the navigation links -->
+    <header>
+        <h1>TechCon 2023</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section (home) -->
+    <section id="home">
+        <!-- Heading with a dynamic typing animation -->
+        <h2></h2>
+        <!-- Paragraphs with event information such as timing and location-->
+        <p>Join us to discover the future of technology!</p>
+        <p>Date: 5th January 2024 - 7th January 2024 | 9:30 am - 6:00 pm</p>
+        <p>Venue: O2 Arena London</p>
+        <p>Peninsula Square, London, GB SE10 0DX</p>
+        <!-- Call-to-action button for registration -->
+        <a href="register.html" class="cta-button">Register Now!</a>
+        <!-- Image related to TechCon -->
+        <img src="images/o2.jpg" alt="TechCon Image">
+        <!-- About techcon information -->
+        <p>About Us:</p>
+        <p>Welcome to TechCon, where innovation and inspiration converge in the heart of technology's forefront! At
+            TechCon, we bring together visionaries, tech enthusiasts, and industry leaders to explore the
+            <strong>boundless possibilities</strong> of the digital landscape. Our event serves as a dynamic platform,
+            fostering
+            collaboration and
+            knowledge exchange. Whether you're a seasoned professional, a budding entrepreneur, or simply curious about
+            the
+            latest tech trends, TechCon invites you to immerse yourself in a <strong>vibrant ecosystem of
+                ideas.</strong> With engaging
+            keynotes, interactive sessions, and hands-on workshops, we aim to ignite your passion for technology,
+            providing
+            a glimpse into the future and empowering you to shape it. Join us on this thrilling journey at TechCon,
+            where<strong>
+                tomorrow's innovations unfold today.</strong>
+        </p>
+    </section>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2023 TechCon. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

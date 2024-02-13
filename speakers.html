@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Code for linking the HTML and CSS files together -->
+    <link rel="stylesheet" href="styles.css">
+    <title>TechCon 2023 - Speakers</title>
+    <!-- Additional styles for hidden topics and expanded view -->
+    <style>
+        .content h3+p {
+            display: none;
+            margin-top: 0;
+        }
+
+        .section.expanded {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+        }
+
+        .section.expanded img {
+            max-width: 80%;
+            max-height: 80%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section contains the navigation links -->
+    <header>
+        <h1>TechCon 2023 - Speakers</h1>
+        <nav>
+            <ul>
+                <!-- Navigation links to navigate to different pages -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Registration</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section for all the 3 different speakers -->
+    <section id="speakers">
+        <!-- Speaker section for the speaker Dr. Benjamin Turner -->
+        <div class="section">
+            <div class="circle">
+                <img src="images/picture1.jpg" alt="Dr. Benjamin Turner">
+            </div>
+            <div class="content">
+                <h3>Dr. Benjamin Turner</h3>
+                <p>
+                    Dr. Benjamin Turner is a distinguished expert in quantum computing with a Ph.D. in Physics. He
+                    currently serves as the Chief Scientist at Quantum Innovations Labs, where he leads groundbreaking
+                    research in quantum algorithms and applications. Dr. Turner is passionate about unraveling the
+                    mysteries of quantum mechanics and pushing the boundaries of computation.
+                </p>
+                <h3>Click to find out Topic:</h3>
+                <p>
+                    Quantum Computing Unleashed: Navigating the Frontier of Computational Power
+                </p>
+            </div>
+        </div>
+
+        <!-- Speaker section for the speaker Johnathan Mitchell -->
+        <div class="section">
+            <div class="circle">
+                <img src="images/picture2.jpg" alt="Johnathan Mitchell">
+            </div>
+            <div class="content">
+                <h3>Johnathan Mitchell</h3>
+                <p>
+                    Johnathan Mitchell is a seasoned data scientist and analytics expert. With a background in
+                    statistics and machine learning, he has successfully implemented data-driven strategies for leading
+                    tech companies. Currently, Johnathan is the Director of Data Science at Analytics Innovate, where he
+                    oversees the development of advanced analytics solutions.
+                </p>
+                <h3>Click to find out Topic:</h3>
+                <p>
+                    Demystifying Data Science: Unleashing the Power of Analytics
+                </p>
+            </div>
+        </div>
+
+        <!-- Speaker section for the speaker Dr. Christopher Reynolds -->
+        <div class="section">
+            <div class="circle">
+                <img src="images/picture3.jpg" alt="Dr. Christopher Reynolds">
+            </div>
+            <div class="content">
+                <h3>Dr. Christopher Reynolds</h3>
+                <p>
+                    Dr. Christopher Reynolds is a prominent expert in renewable energy and sustainable technologies.
+                    With a Ph.D. in Environmental Engineering, he has dedicated his career to advancing clean energy
+                    solutions. Dr. Reynolds is currently the Chief Sustainability Officer at EcoTech Solutions, where he
+                    leads initiatives for a greener and more sustainable future.
+                </p>
+                <h3>Click to find out Topic:</h3>
+                <p>
+                    Sustainable Innovation: Transforming the Future with Renewable Energy
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 TechCon. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to handle the click event and toggle topic visibility -->
+    <script>
+        // Before starting, the script waits for the Document Object Model (DOM) content to load completely. This guarantees that every element on the page is prepared for manipulation. 
+        document.addEventListener('DOMContentLoaded', function () {
+            var topicHeaders = document.querySelectorAll('.content h3');
+
+            topicHeaders.forEach(function (header) {
+                header.addEventListener('click', function () {
+                    // Toggle the visibility of the next paragraph (topic)
+                    var topicParagraph = header.nextElementSibling;
+                    if (topicParagraph.style.display === 'none' || topicParagraph.style.display === '') {
+                        topicParagraph.style.display = 'block';
+                    } else {
+                        topicParagraph.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
